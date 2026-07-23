@@ -21,7 +21,7 @@ const manrope = Manrope({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://mafiaclub.kyiv.ua";
+const siteUrl = "https://w1teen8.github.io/mafia-club-kyiv";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
