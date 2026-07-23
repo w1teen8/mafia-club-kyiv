@@ -59,7 +59,7 @@ export function Hero() {
           </p>
         </Reveal>
 
-        <h1 className="font-display text-[15vw] font-medium leading-[0.98] tracking-tight text-white sm:text-[9vw] lg:text-[7.2vw]">
+        <h1 className="font-display text-[clamp(2.75rem,9vw,7rem)] font-medium leading-[0.98] tracking-tight text-white">
           <RevealLines lines={HEADLINE_LINES} delay={0.25} stagger={0.09} />
         </h1>
 

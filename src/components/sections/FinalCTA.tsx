@@ -52,7 +52,7 @@ export function FinalCTA() {
           </p>
         </Reveal>
 
-        <h2 className="font-display text-[13vw] font-medium leading-[0.98] text-white sm:text-[8vw] lg:text-[6vw]">
+        <h2 className="font-display text-[clamp(2.5rem,7.5vw,5.75rem)] font-medium leading-[0.98] text-white">
           <RevealLines lines={LINES} delay={0.15} stagger={0.1} />
         </h2>
 
