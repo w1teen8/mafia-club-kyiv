@@ -6,7 +6,6 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { GameModes } from "@/components/sections/GameModes";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { EventCalendar } from "@/components/sections/EventCalendar";
-import { Gallery } from "@/components/sections/Gallery";
 import { Reviews } from "@/components/sections/Reviews";
 import { FAQ } from "@/components/sections/FAQ";
 import { PrivateEvents } from "@/components/sections/PrivateEvents";
@@ -26,7 +25,6 @@ export default function Home() {
         <GameModes />
         <WhyUs />
         <EventCalendar />
-        <Gallery />
         <Reviews />
         <PrivateEvents />
         <FAQ />
