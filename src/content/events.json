@@ -1,0 +1,82 @@
+[
+  {
+    "id": "e1",
+    "title": "Classic Mafia Night",
+    "date": "2026-07-26",
+    "time": "19:30",
+    "format": "Classic Mafia",
+    "seatsTotal": 20,
+    "seatsTaken": 14,
+    "location": "Mafia Club Kyiv, Хрещатик 1"
+  },
+  {
+    "id": "e2",
+    "title": "VIP Закритий вечір",
+    "date": "2026-07-29",
+    "time": "20:00",
+    "format": "VIP Games",
+    "seatsTotal": 12,
+    "seatsTaken": 11,
+    "location": "Mafia Club Kyiv, VIP зала"
+  },
+  {
+    "id": "e3",
+    "title": "Fast Mafia — швидкі раунди",
+    "date": "2026-08-01",
+    "time": "19:00",
+    "format": "Fast Mafia",
+    "seatsTotal": 24,
+    "seatsTaken": 9,
+    "location": "Mafia Club Kyiv, Хрещатик 1"
+  },
+  {
+    "id": "e4",
+    "title": "Тематичний вечір: Peaky Blinders",
+    "date": "2026-08-05",
+    "time": "20:00",
+    "format": "Тематична гра",
+    "seatsTotal": 20,
+    "seatsTaken": 6,
+    "location": "Mafia Club Kyiv, Хрещатик 1"
+  },
+  {
+    "id": "e5",
+    "title": "Classic Mafia Night",
+    "date": "2026-08-08",
+    "time": "19:30",
+    "format": "Classic Mafia",
+    "seatsTotal": 20,
+    "seatsTaken": 3,
+    "location": "Mafia Club Kyiv, Хрещатик 1"
+  },
+  {
+    "id": "e6",
+    "title": "Корпоративна гра (приватна)",
+    "date": "2026-08-12",
+    "time": "18:30",
+    "format": "Corporate Games",
+    "seatsTotal": 30,
+    "seatsTaken": 30,
+    "location": "За запитом"
+  },
+  {
+    "id": "e7",
+    "title": "VIP Закритий вечір",
+    "date": "2026-08-15",
+    "time": "20:00",
+    "format": "VIP Games",
+    "seatsTotal": 12,
+    "seatsTaken": 2,
+    "location": "Mafia Club Kyiv, VIP зала"
+  },
+  {
+    "id": "e8",
+    "title": "Fast Mafia — швидкі раунди",
+    "date": "2026-08-19",
+    "time": "19:00",
+    "format": "Fast Mafia",
+    "seatsTotal": 24,
+    "seatsTaken": 0,
+    "location": "Mafia Club Kyiv, Хрещатик 1"
+  }
+]

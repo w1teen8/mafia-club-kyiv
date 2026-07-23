@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "name": "MAFIA CLUB KYIV",
+    "tagline": "Психологічна гра, де кожне рішення змінює історію.",
+    "city": "Київ"
+  },
+  "contacts": {
+    "phone": "+380 (44) 000-00-00",
+    "phoneHref": "tel:+380440000000",
+    "instagram": "https://instagram.com/mafia_club_kyiv",
+    "instagramHandle": "@mafia_club_kyiv",
+    "telegram": "https://t.me/mafia_club_kyiv",
+    "telegramHandle": "@mafia_club_kyiv",
+    "address": "м. Київ, вул. Хрещатик, 1",
+    "mapEmbedUrl": "https://www.google.com/maps?q=Kyiv&output=embed",
+    "mapDirectionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Kyiv"
+  },
+  "stats": [
+    { "value": 700, "suffix": "+", "label": "учасників" },
+    { "value": 100, "suffix": "+", "label": "проведених ігор" },
+    { "value": 100, "suffix": "%", "label": "живі емоції" }
+  ]
+}

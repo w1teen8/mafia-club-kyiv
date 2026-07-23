@@ -1,0 +1,20 @@
+[
+  {
+    "id": "t1",
+    "name": "Максим Вовк",
+    "role": "Головний ведучий",
+    "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop"
+  },
+  {
+    "id": "t2",
+    "name": "Анна Дорош",
+    "role": "Ведуча, event-менеджер",
+    "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop"
+  },
+  {
+    "id": "t3",
+    "name": "Ігор Стасюк",
+    "role": "Ведучий VIP-вечорів",
+    "photo": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=400&h=500&fit=crop"
+  }
+]
