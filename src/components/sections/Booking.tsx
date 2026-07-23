@@ -7,6 +7,8 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { InstagramIcon, TelegramIcon } from "@/components/ui/SocialIcons";
+import { InlineCalendar } from "@/components/ui/InlineCalendar";
+import { cn } from "@/lib/utils";
 import settings from "@/content/settings.json";
 
 const EVENT_TYPES = [
@@ -19,13 +21,41 @@ const EVENT_TYPES = [
   "Team Building",
 ];
 
+const TIME_SLOTS = [
+  "10:00",
+  "12:00",
+  "14:00",
+  "16:00",
+  "18:00",
+  "19:00",
+  "19:30",
+  "20:00",
+  "21:00",
+];
+
 type Status = "idle" | "loading" | "success";
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString("uk-UA", {
+    day: "numeric",
+    month: "long",
+    weekday: "long",
+  });
+}
 
 export function Booking() {
   const [status, setStatus] = useState<Status>("idle");
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
+  const [scheduleError, setScheduleError] = useState(false);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!selectedDate || !selectedTime) {
+      setScheduleError(true);
+      return;
+    }
+    setScheduleError(false);
     setStatus("loading");
     window.setTimeout(() => setStatus("success"), 1400);
   }
@@ -101,7 +131,11 @@ export function Booking() {
                   </p>
                   <button
                     data-cursor-hover
-                    onClick={() => setStatus("idle")}
+                    onClick={() => {
+                      setStatus("idle");
+                      setSelectedDate(null);
+                      setSelectedTime(null);
+                    }}
                     className="mt-8 font-body text-xs uppercase tracking-[0.2em] text-gold underline underline-offset-4"
                   >
                     Надіслати ще одну заявку
@@ -120,12 +154,24 @@ export function Booking() {
                   <Field label="Телефон" name="phone" type="tel" placeholder="+380 __ ___ __ __" required />
                   <Field label="Telegram" name="telegram" placeholder="@username" />
                   <Field label="Instagram" name="instagram" placeholder="@username" />
-                  <Field label="Дата" name="date" type="date" required />
-                  <Field label="Кількість гостей" name="guests" type="number" placeholder="Наприклад, 6" min={1} />
 
-                  <label className="flex flex-col gap-2 sm:col-span-2">
+                  <label className="flex flex-col gap-2">
+                    <span className="font-body text-xs uppercase tracking-[0.2em] text-secondary">
+                      Кількість гостей
+                    </span>
+                    <input
+                      type="number"
+                      name="guests"
+                      min={1}
+                      placeholder="Наприклад, 6"
+                      className="rounded-xl border border-border bg-white/[0.03] px-4 py-3.5 text-white outline-none transition-colors placeholder:text-secondary/50 focus:border-gold"
+                    />
+                  </label>
+
+                  <label className="flex flex-col gap-2">
                     <span className="font-body text-xs uppercase tracking-[0.2em] text-secondary">
                       Тип події
+                      <span className="text-gold"> *</span>
                     </span>
                     <select
                       name="eventType"
@@ -143,6 +189,64 @@ export function Booking() {
                       ))}
                     </select>
                   </label>
+
+                  <div className="flex flex-col gap-2 sm:col-span-2">
+                    <span className="font-body text-xs uppercase tracking-[0.2em] text-secondary">
+                      Оберіть дату
+                      <span className="text-gold"> *</span>
+                    </span>
+                    <InlineCalendar
+                      selected={selectedDate}
+                      onSelect={(d) => {
+                        setSelectedDate(d);
+                        setScheduleError(false);
+                      }}
+                    />
+                    <input
+                      type="hidden"
+                      name="date"
+                      value={selectedDate ? selectedDate.toISOString().slice(0, 10) : ""}
+                    />
+                    {selectedDate && (
+                      <p className="pt-1 font-body text-xs capitalize text-gold">
+                        {formatDate(selectedDate)}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="flex flex-col gap-2 sm:col-span-2">
+                    <span className="font-body text-xs uppercase tracking-[0.2em] text-secondary">
+                      Оберіть час
+                      <span className="text-gold"> *</span>
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {TIME_SLOTS.map((slot) => (
+                        <button
+                          key={slot}
+                          type="button"
+                          data-cursor-hover
+                          onClick={() => {
+                            setSelectedTime(slot);
+                            setScheduleError(false);
+                          }}
+                          className={cn(
+                            "rounded-full border px-4 py-2 font-body text-sm transition-colors duration-200",
+                            selectedTime === slot
+                              ? "border-gold bg-gold text-bg"
+                              : "border-border text-white/80 hover:border-gold/50 hover:text-gold",
+                          )}
+                        >
+                          {slot}
+                        </button>
+                      ))}
+                    </div>
+                    <input type="hidden" name="time" value={selectedTime ?? ""} />
+                    {scheduleError && (
+                      <p className="pt-1 font-body text-xs text-red">
+                        Оберіть дату та час гри
+                      </p>
+                    )}
+                  </div>
 
                   <label className="flex flex-col gap-2 sm:col-span-2">
                     <span className="font-body text-xs uppercase tracking-[0.2em] text-secondary">

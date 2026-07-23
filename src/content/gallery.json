@@ -40,14 +40,6 @@
     "size": "medium"
   },
   {
-    "id": "g6",
-    "category": "Корпоративи",
-    "categoryLabel": "Корпоративи",
-    "src": "https://images.unsplash.com/photo-1541532713592-79a0317b6b77",
-    "alt": "Корпоративна гра Мафія",
-    "size": "small"
-  },
-  {
     "id": "g7",
     "category": "Private Events",
     "categoryLabel": "Private Events",
@@ -57,22 +49,14 @@
   },
   {
     "id": "g8",
-    "category": "Atmosphere",
-    "categoryLabel": "Атмосфера",
+    "category": "Birthday Party",
+    "categoryLabel": "Birthday Party",
     "src": "https://images.unsplash.com/photo-1470337458703-46ad1756a187",
-    "alt": "Атмосферне освітлення бару",
+    "alt": "Святковий коктейль на день народження",
     "size": "small"
   },
   {
     "id": "g9",
-    "category": "Birthday Party",
-    "categoryLabel": "Birthday Party",
-    "src": "https://images.unsplash.com/photo-1465101162946-4377e57745c3",
-    "alt": "Святкування дня народження",
-    "size": "medium"
-  },
-  {
-    "id": "g10",
     "category": "VIP",
     "categoryLabel": "VIP",
     "src": "https://images.unsplash.com/photo-1546171753-97d7676e4602",
@@ -80,15 +64,15 @@
     "size": "small"
   },
   {
-    "id": "g11",
+    "id": "g10",
     "category": "Private Events",
     "categoryLabel": "Private Events",
-    "src": "https://images.unsplash.com/photo-1587574293340-e0011c4e8ecf",
-    "alt": "Закрита приватна вечірка",
+    "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+    "alt": "Деталі приватної вечері",
     "size": "medium"
   },
   {
-    "id": "g12",
+    "id": "g11",
     "category": "Корпоративи",
     "categoryLabel": "Корпоративи",
     "src": "https://images.unsplash.com/photo-1547595628-c61a29f496f0",
@@ -96,27 +80,11 @@
     "size": "small"
   },
   {
-    "id": "g13",
+    "id": "g12",
     "category": "Birthday Party",
     "categoryLabel": "Birthday Party",
     "src": "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7",
     "alt": "День народження в Mafia Club",
     "size": "large"
-  },
-  {
-    "id": "g14",
-    "category": "Atmosphere",
-    "categoryLabel": "Атмосфера",
-    "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
-    "alt": "Деталі вечора Mafia Club",
-    "size": "medium"
-  },
-  {
-    "id": "g15",
-    "category": "Atmosphere",
-    "categoryLabel": "Атмосфера",
-    "src": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0",
-    "alt": "Атмосферний дим Mafia Club",
-    "size": "small"
   }
 ]
